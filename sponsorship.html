@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dewberrybees.com/sponsorship.html" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#6B3FA0" />
+  <title>Hive Sponsorship | Dewberry Bees</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var el = document.getElementById('nav-sponsor');
+      if (el) el.classList.add('active');
+    });
+  </script>
+</head>
+<body>
+
+  <nav class="nav-bar">
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn" id="nav-home">Home</a>
+      <a href="about.html" class="nav-btn" id="nav-about">About Us</a>
+      <a href="contact.html" class="nav-btn" id="nav-contact">Contact Us</a>
+      <a href="products.html" class="nav-btn" id="nav-products">Our Products</a>
+      <a href="sponsorship.html" class="nav-btn" id="nav-sponsor">Hive Sponsorship</a>
+    </div>
+  </nav>
+
+  <div class="nav-spacer" id="nav-spacer"></div>
+
+  <header class="site-header">
+    <img src="drips.png" alt="" role="presentation" />
+  </header>
+
+<main class="sponsor-main">
+      <img src="logo.png" alt="Dewberry Bees" style="width:clamp(180px,45vw,320px);height:auto;border-radius:50%;filter:drop-shadow(0 8px 24px rgba(107,63,160,0.25));" />
+      <h1>Hive Sponsorship</h1>
+
+      <p class="subhead">Support local beekeeping and help our bees thrive in Nailsea, North Somerset</p>
+
+      <p class="body-text">By sponsoring one of our hives, you directly support the health of our local bee population, sustainable beekeeping, and the production of beautiful, natural honey. In return, sponsors receive regular updates from their hive, exclusive honey and a warm glow knowing they're doing something wonderful for nature.</p>
+
+      <div class="sponsor-tiers">
+        <div class="sponsor-card">
+          <div class="tier-icon" style="line-height:1;"><img src="bee-logo.png" alt="🐝" style="width:52px;height:auto;display:inline-block;vertical-align:middle;transform:rotate(-12deg);" /></div>
+          <h3>Bee Buddy<br/><span style="font-size:0.65em;color:var(--purple-light);font-weight:700;display:block;margin-top:2px;">(Individual Sponsorship)</span></h3>
+          <p>Perfect for honey lovers and nature enthusiasts! As a Bee Buddy you'll adopt one of our bees in the apiary — your very own hardworking forager buzzing around Nailsea!</p>
+          <p>You'll receive <strong>2 jars of delicious honey</strong> from the apiary each year, plus a personalised certificate to show off your bee credentials.</p>
+          <p class="price" style="color:var(--purple-dark);margin-top:12px;">£25 per year</p>
+          <a  href="contact.html" class="sponsor-btn">Become a Bee Buddy Today!</a>
+        </div>
+        <div class="sponsor-card">
+          <div class="tier-icon" style="line-height:1;"><img src="bee-logo.png" alt="🐝" style="width:52px;height:auto;display:inline-block;vertical-align:middle;transform:rotate(12deg);" /></div>
+          <h3>Pollination Partner<br/><span style="font-size:0.65em;color:var(--purple-light);font-weight:700;display:block;margin-top:2px;">(Corporate Sponsorship)</span></h3>
+          <p>A brilliant fit for forward-thinking companies, B-Corps and businesses with sustainability at their heart. As a Pollination Partner you'll sponsor a hive and receive naming rights to the colony's queen — yes, really!</p>
+          <p>You'll also enjoy brand recognition on our website, honey gifts for your team, and a certificate of sponsorship perfect for the office wall!</p>
+          <p>Unsure of what you need from us? Drop us a line and we can provide custom packages to suit you!</p>
+                    <p class="price" style="color:var(--purple-dark);margin-top:auto;padding-top:16px;">From £250 per year</p>
+          <a  href="contact.html" class="sponsor-btn">Ready to become a Pollination Partner?</a>
+        </div>
+      </div>
+
+      <div class="sponsors-showcase">
+        <h2>Our Sponsors</h2>
+        <div class="sponsors-placeholder">
+          <img src="bee-logo.png" alt="🐝" style="width:36px;height:auto;display:inline-block;vertical-align:middle;transform:rotate(-20deg);margin-bottom:8px;display:block;margin-left:auto;margin-right:auto;" /> This space is reserved for our wonderful hive sponsors.<br/>
+          Sponsor a hive and your name or logo will appear here!
+        </div>
+      </div>
+
+
+    </main>
+
+  <footer>
+    <img src="bottom-wave.png" alt="" role="presentation" style="display:block;width:100%;height:auto;margin:0;padding:0;border:none;" />
+    <p style="background-color:#FFC117;color:#000000;font-family:var(--font-bold);font-weight:700;font-size:1rem;text-align:center;margin:0;padding:6px 16px 8px;">© 2025 Dewberry Bees · Nailsea, England.</p>
+  </footer>
+
+  <script>
+    // Dynamically match body top padding to actual nav height
+    function adjustForNav() {
+      var nav = document.querySelector('.nav-bar');
+      var spacer = document.getElementById('nav-spacer');
+      if (nav && spacer) {
+        spacer.style.height = nav.offsetHeight + 'px';
+      }
+    }
+    adjustForNav();
+    window.addEventListener('resize', adjustForNav);
+    window.addEventListener('load', adjustForNav);
+  </script>
+</body>
+</html>

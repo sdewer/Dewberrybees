@@ -1,0 +1,4 @@
+# Redirect www to non-www
+https://www.dewberrybees.com/* https://dewberrybees.com/:splat 301
+http://www.dewberrybees.com/* https://dewberrybees.com/:splat 301
+http://dewberrybees.com/* https://dewberrybees.com/:splat 301

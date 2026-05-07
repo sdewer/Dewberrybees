@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://dewberrybees.com/products.html" />
+  <!-- Favicon -->
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+  <link rel="manifest" href="site.webmanifest" />
+  <meta name="theme-color" content="#6B3FA0" />
+  <title>Our Products | Dewberry Bees — Raw Honey &amp; Beeswax Lip Balm, Nailsea</title>
+  <meta name="description" content="Shop Dewberry Bees' raw Nailsea Wildflower Honey and natural Beeswax Lip Balm. Local, raw, unpasteurised honey and handcrafted lip balm in four flavours. North Somerset." />
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+
+    /* ── Lightbox ── */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      font-family: sans-serif;
+      line-height: 1;
+      opacity: 0.8;
+    }
+    .lightbox-close:hover { opacity: 1; }
+
+    /* Make product images zoomable */
+    .product-hero-wrap {
+      display: block;
+      overflow: hidden;
+      cursor: zoom-in;
+      line-height: 0;
+    }
+    .product-hero-wrap img {
+      transition: transform 0.3s ease;
+    }
+    .product-hero-wrap:hover img {
+      transform: scale(1.03);
+    }
+    .product-gallery a {
+      cursor: zoom-in;
+      display: block;
+      overflow: hidden;
+      border-radius: 14px;
+    }
+    .product-gallery a img {
+      transition: transform 0.3s ease;
+    }
+    .product-gallery a:hover img {
+      transform: scale(1.04);
+    }
+    /* ── Products page specific styles ── */
+    .products-main {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: clamp(14px, 3vw, 28px) 20px clamp(40px, 8vw, 80px);
+      gap: 32px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .products-intro {
+      text-align: center;
+      max-width: 620px;
+    }
+
+    .products-intro h1 {
+      font-family: var(--font-bold);
+      font-weight: 700;
+      font-size: clamp(3rem, 10vw, 5.5rem);
+      color: #000;
+      line-height: 1.1;
+    }
+
+    .products-intro p {
+      font-family: var(--font-bold);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      color: var(--purple-dark);
+      margin-top: 8px;
+      line-height: 1.6;
+    }
+
+    .product-price {
+      font-family: var(--font-bold);
+      font-size: clamp(1.5rem, 4vw, 2rem);
+      color: var(--purple-dark);
+      font-weight: 700;
+      margin: 10px 0 4px;
+    }
+
+    .product-price span {
+      font-size: 0.6em;
+      color: var(--purple-light);
+      font-weight: 700;
+    }
+
+    /* ── Product section ── */
+    .product-section {
+      width: 100%;
+      max-width: 900px;
+      background: rgba(255,255,255,0.62);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(107,63,160,0.13);
+      border: 2px solid rgba(107,63,160,0.1);
+    }
+
+    .product-hero {
+      width: 100%;
+      aspect-ratio: 4/3;
+      object-fit: cover;
+      display: block;
+    }
+
+    @media (min-width: 600px) {
+      .product-hero {
+        aspect-ratio: 16/9;
+      }
+    }
+
+    .product-body {
+      padding: clamp(24px, 5vw, 48px);
+    }
+
+    .product-tag {
+      display: inline-block;
+      background: var(--purple-dark);
+      color: #fff;
+      font-family: var(--font-bold);
+      font-size: 0.8rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 5px 14px;
+      border-radius: 50px;
+      margin-bottom: 14px;
+    }
+
+    .product-body h2 {
+      font-family: var(--font-bold);
+      font-weight: 700;
+      font-size: clamp(1.8rem, 6vw, 3rem);
+      color: #000;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .product-subtitle {
+      font-family: var(--font-bold);
+      font-size: clamp(1rem, 2.5vw, 1.2rem);
+      color: var(--purple-dark);
+      margin-bottom: 18px;
+      font-weight: 700;
+    }
+
+    .product-desc {
+      font-family: var(--font-bold);
+      font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+      color: #3a2800;
+      line-height: 1.8;
+      margin-bottom: 14px;
+    }
+
+    /* ── Product badges ── */
+    .product-badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 18px 0;
+    }
+
+    .badge {
+      background: #FFC117;
+      color: #2a1a00;
+      font-family: var(--font-bold);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 5px 14px;
+      border-radius: 50px;
+    }
+
+    /* ── Flavour chips ── */
+    .flavours {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    .flavour-chip {
+      background: rgba(107,63,160,0.1);
+      border: 2px solid var(--purple-light);
+      color: var(--purple-dark);
+      font-family: var(--font-bold);
+      font-size: 0.9rem;
+      font-weight: 700;
+      padding: 7px 18px;
+      border-radius: 50px;
+    }
+
+    /* ── Ingredient list ── */
+    .ingredients {
+      background: rgba(255,193,23,0.12);
+      border-left: 4px solid #FFC117;
+      border-radius: 0 12px 12px 0;
+      padding: 16px 20px;
+      margin: 18px 0;
+    }
+
+    .ingredients h4 {
+      font-family: var(--font-bold);
+      font-size: 0.9rem;
+      color: var(--purple-dark);
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+    }
+
+    .ingredients ul {
+      list-style: none;
+      padding: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px 20px;
+    }
+
+    .ingredients li {
+      font-family: var(--font-bold);
+      font-size: 0.95rem;
+      color: #3a2800;
+      line-height: 1.5;
+    }
+
+    .ingredients li::before {
+      content: "🐝 ";
+      font-size: 0.8em;
+    }
+
+    /* ── Gallery ── */
+    .product-gallery {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 24px;
+    }
+
+    .product-gallery img {
+      width: 100%;
+      border-radius: 14px;
+      object-fit: cover;
+      aspect-ratio: 4/3;
+      display: block;
+    }
+
+    /* ── CTA button ── */
+    .product-cta {
+      margin-top: 28px;
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .product-cta a {
+      display: inline-block;
+      padding: 13px 30px;
+      background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
+      color: #fff;
+      font-family: var(--font-bold);
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .product-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(107,63,160,0.3);
+    }
+
+    /* ── Bee divider ── */
+    .bee-section-divider {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      margin: -16px 0;
+    }
+
+    .bee-section-divider img {
+      width: clamp(120px, 27vw, 240px);
+      height: auto;
+    }
+  </style>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      var el = document.getElementById('nav-products');
+      if (el) el.classList.add('active');
+    });
+  </script>
+</head>
+<body>
+
+<nav class="nav-bar">
+    <div class="nav-links">
+      <a href="index.html" class="nav-btn" id="nav-home">Home</a>
+      <a href="about.html" class="nav-btn" id="nav-about">About Us</a>
+      <a href="contact.html" class="nav-btn" id="nav-contact">Contact Us</a>
+      <a href="products.html" class="nav-btn" id="nav-products">Our Products</a>
+      <a href="sponsorship.html" class="nav-btn" id="nav-sponsor">Hive Sponsorship</a>
+    </div>
+  </nav>
+
+  <div class="nav-spacer" id="nav-spacer"></div>
+
+  <!-- Honey drip header -->
+  <header class="site-header">
+    <img src="drips.png" alt="" role="presentation" />
+  </header>
+
+  <main class="products-main">
+
+    <!-- Page intro -->
+    <div class="products-intro">
+      <h1>Our Products</h1>
+      <p>Handcrafted with care in Nailsea, North Somerset — straight from our apiary to you.</p>
+    </div>
+
+    <!-- ── HONEY SECTION ── -->
+    <section class="product-section">
+      <a class="product-hero-wrap" href="honey-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="honey-main.jpg" alt="Jar of Dewberry Bees Nailsea Wildflower Honey" /></a>
+      <div class="product-body">
+        <span class="product-tag">⭐ Our Signature Product</span>
+        <h2>Nailsea Wildflower Honey</h2>
+        <p class="product-subtitle">Local · Raw · Unpasteurised · Wildflower</p>
+        <p class="product-price">£5.00 <span>/ 227g (8 oz) jar</span></p>
+
+        <div class="product-badges">
+          <span class="badge">100% Raw</span>
+          <span class="badge">Unpasteurised</span>
+          <span class="badge">Local to Nailsea</span>
+          <span class="badge">Single Apiary</span>
+          <span class="badge">Wildflower</span>
+        </div>
+
+        <p class="product-desc">
+          Our bees forage freely across the wildflower-rich fields and hedgerows surrounding Nailsea, producing a beautifully rich, complex honey that truly tastes of the local landscape. This is honey exactly as nature intended — raw, unpasteurised and unblended, with nothing added and nothing taken away.
+        </p>
+        <p class="product-desc">
+          Raw honey retains all the natural enzymes, pollen and goodness that heating destroys. Every batch comes from a single apiary, so the flavour reflects the season and the forage —
+        </p>
+        <p class="product-desc" style="font-style:italic;color:var(--purple-dark);">
+          Note: natural crystallisation may occur — this is a sign of pure, unprocessed honey. Simply stand the jar in warm water to return it to its liquid state.
+        </p>
+
+        <div class="product-gallery">
+          <a href="honey-jars.jpg" onclick="openLightbox(this); return false;"><img src="honey-jars.jpg" alt="Three jars of Dewberry Bees honey stacked on a garden table" loading="lazy" /></a>
+          <a href="honey-comb.jpg" onclick="openLightbox(this); return false;"><img src="honey-comb.jpg" alt="A full honeycomb frame freshly lifted from the hive" loading="lazy" /></a>
+        </div>
+
+        <div class="product-cta">
+          <a href="contact.html">Enquire to Buy</a>
+          <span style="font-family:var(--font-bold);font-size:0.95rem;color:var(--purple-light);">Available while stocks last</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flying bee divider -->
+    <div class="bee-section-divider">
+      <img src="flying-bee.png" alt="" role="presentation" style="transform:scaleX(-1);" />
+    </div>
+
+    <!-- ── LIP BALM SECTION ── -->
+    <section class="product-section">
+      <a class="product-hero-wrap" href="lipbalm-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="lipbalm-main.jpg" alt="Dewberry Bees Beeswax Lip Balm tubes" /></a>
+      <div class="product-body">
+        <span class="product-tag">Natural Skincare</span>
+        <h2>Moisturising Beeswax Lip Balm</h2>
+        <p class="product-subtitle">6 Natural Ingredients · 4 Flavours</p>
+        <p class="product-price">£1.50 <span>per lip balm</span></p>
+
+        <div class="product-badges">
+          <span class="badge">Natural Ingredients</span>
+          <span class="badge">Deeply Moisturising</span>
+          <span class="badge">Handcrafted</span>
+        </div>
+
+        <p class="product-desc">
+          Made with just six carefully chosen natural ingredients, our beeswax lip balm is a treat for dry or chapped lips. Beeswax creates a protective barrier that locks in moisture without feeling heavy, while <strong>coconut oil</strong> delivers deep hydration and a silky-smooth glide. <strong>Lanolin</strong> — nature's own lip softener — mimics the skin's natural oils to repair and condition, and <strong>Vitamin E</strong> works as a natural antioxidant to nourish and protect.
+        </p>
+        <p class="product-desc">
+          The result is a lip balm that actually works — long-lasting, non-greasy and genuinely good for your lips.
+        </p>
+
+        <div class="ingredients">
+          <h4>6 Natural Ingredients</h4>
+          <ul>
+            <li>Beeswax</li>
+            <li>Coconut Oil</li>
+            <li>Lanolin</li>
+            <li>Sunflower Oil</li>
+            <li>Vitamin E</li>
+            <li>Natural Flavouring</li>
+          </ul>
+        </div>
+
+        <p class="product-desc" style="font-weight:700;color:var(--purple-dark);margin-bottom:8px;">Available in four flavours:</p>
+        <div class="flavours">
+          <span class="flavour-chip">🍯 Original Beeswax</span>
+          <span class="flavour-chip">🍒 Cherry</span>
+          <span class="flavour-chip">🍦 Vanilla</span>
+          <span class="flavour-chip">🌿 Peppermint</span>
+        </div>
+
+        <div class="product-gallery">
+          <a href="lipbalm-tins.jpg" onclick="openLightbox(this); return false;" style="grid-column:1/-1;"><img src="lipbalm-tins.jpg" alt="Dewberry Bees Beeswax Lip Balm tins and packaging" loading="lazy" style="aspect-ratio:4/3;" /></a>
+        </div>
+
+        <div class="product-cta">
+          <a href="contact.html">Enquire to Buy</a>
+          <span style="font-family:var(--font-bold);font-size:0.95rem;color:var(--purple-light);">Available while stocks last</span>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <img src="bottom-wave.png" alt="" role="presentation" style="display:block;width:100%;height:auto;margin:0;padding:0;border:none;" />
+    <p style="background-color:#FFC117;color:#000000;font-family:var(--font-bold);font-weight:700;font-size:1rem;text-align:center;margin:0;padding:6px 16px 8px;">© 2025 Dewberry Bees · Nailsea, England.</p>
+  </footer>
+
+  <script>
+    // Dynamically match body top padding to actual nav height
+    function adjustForNav() {
+      var nav = document.querySelector('.nav-bar');
+      var spacer = document.getElementById('nav-spacer');
+      if (nav && spacer) {
+        spacer.style.height = nav.offsetHeight + 'px';
+      }
+    }
+    adjustForNav();
+    window.addEventListener('resize', adjustForNav);
+    window.addEventListener('load', adjustForNav);
+  </script>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    function openLightbox(el) {
+      var lb = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      img.src = el.href;
+      img.alt = el.querySelector('img').alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lightbox-img').src = '';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
+</body>
+</html>
