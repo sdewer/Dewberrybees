@@ -3,7 +3,7 @@ https://www.dewberrybees.com/* https://dewberrybees.com/:splat 301
 http://www.dewberrybees.com/* https://dewberrybees.com/:splat 301
 http://dewberrybees.com/* https://dewberrybees.com/:splat 301
 
-# Clean URLs → .html (consolidates Google indexing to single canonical URLs)
+# Clean URLs to .html (consolidates Google indexing to single canonical URLs)
 /about /about.html 301
 /contact /contact.html 301
 /products /products.html 301
