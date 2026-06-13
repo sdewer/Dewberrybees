@@ -589,9 +589,9 @@
       box-sizing: border-box;
     }
 
-    @media (min-width: 640px) {
+    @media (min-width: 760px) {
       .sponsor-card {
-        width: clamp(240px, 40vw, 380px);
+        width: clamp(280px, 40vw, 380px);
       }
     }
 
