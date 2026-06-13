@@ -19,6 +19,82 @@
       if (el) el.classList.add('active');
     });
   </script>
+  <style>
+    /* ── Sponsors section ── */
+    .sponsor-tier-section {
+      width: 100%;
+      max-width: 820px;
+      margin-bottom: 28px;
+    }
+
+    .sponsor-tier-heading {
+      font-family: var(--font-bold);
+      font-size: clamp(1.1rem, 3vw, 1.4rem);
+      color: var(--purple-dark);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid rgba(107,63,160,0.15);
+    }
+
+    /* Individual sponsor card */
+    .sponsor-card-full {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      background: rgba(255,255,255,0.65);
+      border-radius: 20px;
+      padding: clamp(20px, 4vw, 32px);
+      box-shadow: 0 6px 28px rgba(107,63,160,0.11);
+      border: 2px solid rgba(107,63,160,0.1);
+      box-sizing: border-box;
+      text-align: center;
+    }
+
+    @media (min-width: 560px) {
+      .sponsor-card-full {
+        flex-direction: row;
+        align-items: center;
+        text-align: left;
+      }
+    }
+
+    .sponsor-card-logo-wrap {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: clamp(100px, 25vw, 160px);
+    }
+
+    .sponsor-card-logo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .sponsor-card-body h4 {
+      font-family: var(--font-bold);
+      font-size: clamp(1rem, 2.8vw, 1.25rem);
+      color: #000;
+      margin-bottom: 8px;
+    }
+
+    .sponsor-card-body p {
+      font-family: var(--font-bold);
+      font-size: clamp(0.88rem, 2.3vw, 1rem);
+      color: #3a2800;
+      line-height: 1.75;
+    }
+
+    .sponsor-card-body a {
+      color: var(--purple-dark);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .sponsor-card-body a:hover { text-decoration: underline; }
+  </style>
 </head>
 <body>
 
@@ -68,21 +144,38 @@
 
       <div class="sponsors-showcase">
         <h2>Our Sponsors</h2>
-        <!-- Salon Concepts sponsor card -->
-        <div class="sponsor-profile-card">
-          <div class="sponsor-profile-logo">
-            <img src="salon-concepts-logo.png" alt="Salon Concepts" />
-          </div>
-          <div class="sponsor-profile-text">
-            <h3>Salon Concepts <span class="sponsor-tier-badge">Pollination Partner</span></h3>
-            <p>A huge thank you to Adam and the team at <a href="https://salonconcepts.co.uk/" target="_blank" rel="noopener">Salon Concepts</a> for being our very first hive sponsor. Approaching their 40th year, Salon Concepts are a certified B-Corp representing the world's top hair brands across the South West — passionate about sustainability, education, and using business as a force for good. A perfect fit.</p>
+
+        <!-- POLLINATION PARTNERS -->
+        <div class="sponsor-tier-section">
+          <h3 class="sponsor-tier-heading">
+            <img src="bee-logo.png" alt="" role="presentation" style="width:32px;height:auto;transform:rotate(10deg);vertical-align:middle;margin-right:8px;" />
+            Pollination Partners
+          </h3>
+
+          <div class="sponsor-card-full">
+            <div class="sponsor-card-logo-wrap">
+              <img src="salon-concepts-logo.png" alt="Salon Concepts logo" />
+            </div>
+            <div class="sponsor-card-body">
+              <h4>Salon Concepts</h4>
+              <p>A huge thank you to Adam and the team at <a href="https://salonconcepts.co.uk/" target="_blank" rel="noopener">Salon Concepts</a> for being our very first hive sponsor. Approaching their 40th year, Salon Concepts are a certified B-Corp representing the world's top hair brands across the South West — passionate about sustainability, education, and using business as a force for good. A perfect fit.</p>
+            </div>
           </div>
         </div>
 
-        <div class="sponsors-placeholder" style="margin-top:20px;">
-          <img src="bee-logo.png" alt="" role="presentation" style="width:36px;height:auto;display:block;margin:0 auto 8px;transform:rotate(-20deg);" /> Could your name be here next?<br/>
-          Sponsor a hive and join our community of supporters!
+        <!-- BEE BUDDIES -->
+        <div class="sponsor-tier-section">
+          <h3 class="sponsor-tier-heading">
+            <img src="bee-logo.png" alt="" role="presentation" style="width:32px;height:auto;transform:rotate(-10deg);vertical-align:middle;margin-right:8px;" />
+            Bee Buddies
+          </h3>
+          <div class="sponsors-placeholder">
+            Could your name be here next?<br/>
+            Sponsor one of our bees and join our community of supporters!
+          </div>
         </div>
+
+      </div>
       </div>
 
 
