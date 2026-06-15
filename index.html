@@ -40,79 +40,267 @@
   <meta name="geo.region" content="GB-SOM" />
   <meta name="geo.placename" content="Nailsea, North Somerset, England" />
 
-  <!-- JSON-LD Structured Data: Local Business -->
+  <!-- Structured Data -->
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Dewberry Bees",
-    "description": "Small-batch raw honey, beeswax lip balm and natural bee products produced in Nailsea, North Somerset. We supply customers across Nailsea, Tickenham, Wraxall, Backwell, Clevedon, Yatton, Congresbury and the wider Bristol and North Somerset area. Swarm collection, beekeeping education and hive sponsorship available. Proud members of the BBKA and North Somerset Beekeepers.",
-    "url": "https://dewberrybees.com",
-    "logo": "https://dewberrybees.com/og-image.png",
-    "image": "https://dewberrybees.com/og-image.png",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Nailsea",
-      "addressRegion": "North Somerset",
-      "addressCountry": "GB"
+  [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "@id": "https://dewberrybees.com/#website",
+      "name": "Dewberry Bees",
+      "url": "https://dewberrybees.com",
+      "description": "Raw Nailsea honey, beeswax lip balm and natural bee products from a family beekeeping operation in Nailsea, North Somerset.",
+      "inLanguage": "en-GB",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://dewberrybees.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
-    "areaServed": [
-      { "@type": "Place", "name": "Nailsea" },
-      { "@type": "Place", "name": "Clevedon" },
-      { "@type": "Place", "name": "Portishead" },
-      { "@type": "Place", "name": "Backwell" },
-      { "@type": "Place", "name": "Yatton" },
-      { "@type": "Place", "name": "Congresbury" },
-      { "@type": "Place", "name": "Wrington" },
-      { "@type": "Place", "name": "Long Ashton" },
-      { "@type": "Place", "name": "Pill" },
-      { "@type": "Place", "name": "Portbury" },
-      { "@type": "Place", "name": "Tickenham" },
-      { "@type": "Place", "name": "Wraxall" },
-      { "@type": "Place", "name": "Failand" },
-      { "@type": "Place", "name": "Flax Bourton" },
-      { "@type": "Place", "name": "Dundry" },
-      { "@type": "Place", "name": "Winford" },
-      { "@type": "Place", "name": "Barrow Gurney" },
-      { "@type": "Place", "name": "Brockley" },
-      { "@type": "Place", "name": "Churchill" },
-      { "@type": "Place", "name": "Langford" },
-      { "@type": "Place", "name": "Easton-in-Gordano" },
-      { "@type": "Place", "name": "Clapton-in-Gordano" },
-      { "@type": "Place", "name": "North Somerset" },
-      { "@type": "Place", "name": "Bristol" }
-    ],
-    "hasOfferCatalog": {
-      "@type": "OfferCatalog",
-      "name": "Dewberry Bees Products and Services",
-      "itemListElement": [
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Swarm Collection" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beekeeping Education" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bee Buddy Hive Sponsorship" } },
-        { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pollination Partner Corporate Hive Sponsorship" } }
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "@id": "https://dewberrybees.com/#business",
+      "name": "Dewberry Bees",
+      "description": "Small-batch raw honey, beeswax lip balm and natural bee products produced in Nailsea, North Somerset. We supply customers across Nailsea, Tickenham, Wraxall, Backwell, Clevedon, Yatton, Congresbury and the wider Bristol and North Somerset area. Swarm collection, beekeeping education and hive sponsorship available. Proud members of the BBKA and North Somerset Beekeepers.",
+      "url": "https://dewberrybees.com",
+      "logo": "https://dewberrybees.com/logo.png",
+      "image": "https://dewberrybees.com/og-image.png",
+      "email": "stefan@dewberrybees.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Nailsea",
+        "addressRegion": "North Somerset",
+        "postalCode": "BS48",
+        "addressCountry": "GB"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 51.4317,
+        "longitude": -2.7597
+      },
+      "areaServed": [
+        { "@type": "Place", "name": "Nailsea" },
+        { "@type": "Place", "name": "Clevedon" },
+        { "@type": "Place", "name": "Portishead" },
+        { "@type": "Place", "name": "Backwell" },
+        { "@type": "Place", "name": "Yatton" },
+        { "@type": "Place", "name": "Congresbury" },
+        { "@type": "Place", "name": "Wrington" },
+        { "@type": "Place", "name": "Long Ashton" },
+        { "@type": "Place", "name": "Pill" },
+        { "@type": "Place", "name": "Portbury" },
+        { "@type": "Place", "name": "Tickenham" },
+        { "@type": "Place", "name": "Wraxall" },
+        { "@type": "Place", "name": "Failand" },
+        { "@type": "Place", "name": "Flax Bourton" },
+        { "@type": "Place", "name": "Dundry" },
+        { "@type": "Place", "name": "Winford" },
+        { "@type": "Place", "name": "Barrow Gurney" },
+        { "@type": "Place", "name": "Brockley" },
+        { "@type": "Place", "name": "Churchill" },
+        { "@type": "Place", "name": "Langford" },
+        { "@type": "Place", "name": "Easton-in-Gordano" },
+        { "@type": "Place", "name": "Clapton-in-Gordano" },
+        { "@type": "Place", "name": "North Somerset" },
+        { "@type": "Place", "name": "Bristol" }
+      ],
+      "hasOfferCatalog": {
+        "@type": "OfferCatalog",
+        "name": "Dewberry Bees Products and Services",
+        "itemListElement": [
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Swarm Collection" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Beekeeping Education" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Bee Buddy Hive Sponsorship" } },
+          { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Pollination Partner Corporate Hive Sponsorship" } }
+        ]
+      },
+      "sameAs": [
+        "https://www.instagram.com/dewberrybees",
+        "https://www.facebook.com/dewberrybees"
+      ],
+      "knowsAbout": [
+        "beekeeping", "raw honey", "natural honey", "beeswax", "lip balm",
+        "swarm collection", "hive sponsorship", "beekeeping education", "bee products"
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "British Beekeepers Association",
+          "url": "https://www.bbka.org.uk/"
+        },
+        {
+          "@type": "Organization",
+          "name": "North Somerset Beekeepers",
+          "url": "https://www.northsomersetbeekeepers.org/"
+        }
       ]
     },
-    "sameAs": [
-      "https://www.instagram.com/dewberrybees",
-      "https://www.facebook.com/dewberrybees"
-    ],
-    "knowsAbout": [
-      "beekeeping", "raw honey", "natural honey", "beeswax", "lip balm",
-      "swarm collection", "hive sponsorship", "beekeeping education", "bee products"
-    ],
-    "memberOf": [
-      {
-        "@type": "Organization",
-        "name": "British Beekeepers Association",
-        "url": "https://www.bbka.org.uk/"
-      },
-      {
-        "@type": "Organization",
-        "name": "North Somerset Beekeepers",
-        "url": "https://www.northsomersetbeekeepers.org/"
-      }
-    ]
-  }
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Dewberry Bees Products",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "item": {
+            "@type": "Product",
+            "@id": "https://dewberrybees.com/products.html#raw-honey",
+            "name": "Nailsea Wildflower Honey",
+            "description": "100% pure, raw, unpasteurised wildflower honey produced locally in Nailsea, North Somerset. Single apiary. 227g jar.",
+            "image": "https://dewberrybees.com/honey-main.jpg",
+            "brand": { "@type": "Brand", "name": "Dewberry Bees" },
+            "url": "https://dewberrybees.com/products.html",
+            "offers": {
+              "@type": "Offer",
+              "price": "5.00",
+              "priceCurrency": "GBP",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": { "@type": "LocalBusiness", "name": "Dewberry Bees" },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "GB",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+                "merchantReturnDays": 0,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "GB" },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 3, "unitCode": "DAY" },
+                  "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "item": {
+            "@type": "Product",
+            "@id": "https://dewberrybees.com/products.html#lip-balm",
+            "name": "Beeswax Lip Balm",
+            "description": "Natural moisturising beeswax lip balm made with 6 natural ingredients including coconut oil, lanolin and vitamin E. Available in Original, Cherry, Vanilla and Peppermint.",
+            "image": "https://dewberrybees.com/lipbalm-main.jpg",
+            "brand": { "@type": "Brand", "name": "Dewberry Bees" },
+            "url": "https://dewberrybees.com/products.html",
+            "offers": {
+              "@type": "Offer",
+              "price": "1.50",
+              "priceCurrency": "GBP",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": { "@type": "LocalBusiness", "name": "Dewberry Bees" },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "GB",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+                "merchantReturnDays": 0,
+                "returnMethod": "https://schema.org/ReturnByMail",
+                "returnFees": "https://schema.org/FreeReturn"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "GB" },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 3, "unitCode": "DAY" },
+                  "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
+                }
+              }
+            }
+          }
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "item": {
+            "@type": "Product",
+            "@id": "https://dewberrybees.com/products.html#beeswax",
+            "name": "Beeswax",
+            "description": "Pure natural beeswax rendered from our hives in Nailsea, North Somerset.",
+            "image": "https://dewberrybees.com/og-image.png",
+            "brand": { "@type": "Brand", "name": "Dewberry Bees" },
+            "url": "https://dewberrybees.com/products.html",
+            "offers": {
+              "@type": "Offer",
+              "priceCurrency": "GBP",
+              "availability": "https://schema.org/InStock",
+              "itemCondition": "https://schema.org/NewCondition",
+              "seller": { "@type": "LocalBusiness", "name": "Dewberry Bees" },
+              "priceSpecification": {
+                "@type": "PriceSpecification",
+                "priceCurrency": "GBP",
+                "price": "0",
+                "description": "Price on enquiry"
+              },
+              "hasMerchantReturnPolicy": {
+                "@type": "MerchantReturnPolicy",
+                "applicableCountry": "GB",
+                "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
+              },
+              "shippingDetails": {
+                "@type": "OfferShippingDetails",
+                "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
+                "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "GB" },
+                "deliveryTime": {
+                  "@type": "ShippingDeliveryTime",
+                  "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 3, "unitCode": "DAY" },
+                  "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Dewberry Bees — Site Pages",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "About Us",
+          "description": "Who we are — a small family beekeeping operation in Nailsea, North Somerset.",
+          "url": "https://dewberrybees.com/about"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Our Products",
+          "description": "Raw wildflower honey and beeswax lip balm, produced in Nailsea.",
+          "url": "https://dewberrybees.com/products"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Hive Sponsorship",
+          "description": "Sponsor a hive as an individual or business. Bee Buddy from £25/year, Pollination Partner from £250/year.",
+          "url": "https://dewberrybees.com/sponsorship"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Contact Us",
+          "description": "Get in touch for honey orders, swarm collection, education or sponsorship enquiries.",
+          "url": "https://dewberrybees.com/contact"
+        }
+      ]
+    }
+  ]
   </script>
   <link rel="stylesheet" href="styles.css" />
   <script>
@@ -120,184 +308,6 @@
       var el = document.getElementById('nav-home');
       if (el) el.classList.add('active');
     });
-  </script>
-  <!-- JSON-LD: Products — fully compliant with Merchant Listings requirements -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "ItemList",
-    "name": "Dewberry Bees Products",
-    "itemListElement": [
-      {
-        "@type": "ListItem",
-        "position": 1,
-        "item": {
-          "@type": "Product",
-          "@id": "https://dewberrybees.com/products.html#raw-honey",
-          "name": "Nailsea Wildflower Honey",
-          "description": "100% pure, raw, unpasteurised wildflower honey produced locally in Nailsea, North Somerset. Single apiary. 227g jar.",
-          "image": "https://dewberrybees.com/honey-main.jpg",
-          "brand": { "@type": "Brand", "name": "Dewberry Bees" },
-          "url": "https://dewberrybees.com/products.html",
-          "offers": {
-            "@type": "Offer",
-            "price": "5.00",
-            "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "LocalBusiness", "name": "Dewberry Bees" },
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "GB",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-              "merchantReturnDays": 0,
-              "returnMethod": "https://schema.org/ReturnByMail",
-              "returnFees": "https://schema.org/FreeReturn"
-            },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": "0",
-                "currency": "GBP"
-              },
-              "shippingDestination": {
-                "@type": "DefinedRegion",
-                "addressCountry": "GB"
-              },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 3,
-                  "unitCode": "DAY"
-                },
-                "transitTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 1,
-                  "maxValue": 5,
-                  "unitCode": "DAY"
-                }
-              }
-            }
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 2,
-        "item": {
-          "@type": "Product",
-          "@id": "https://dewberrybees.com/products.html#lip-balm",
-          "name": "Beeswax Lip Balm",
-          "description": "Natural moisturising beeswax lip balm made with 6 natural ingredients including coconut oil, lanolin and vitamin E. Available in Original, Cherry, Vanilla and Peppermint.",
-          "image": "https://dewberrybees.com/lipbalm-main.jpg",
-          "brand": { "@type": "Brand", "name": "Dewberry Bees" },
-          "url": "https://dewberrybees.com/products.html",
-          "offers": {
-            "@type": "Offer",
-            "price": "1.50",
-            "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "LocalBusiness", "name": "Dewberry Bees" },
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "GB",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
-              "merchantReturnDays": 0,
-              "returnMethod": "https://schema.org/ReturnByMail",
-              "returnFees": "https://schema.org/FreeReturn"
-            },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": {
-                "@type": "MonetaryAmount",
-                "value": "0",
-                "currency": "GBP"
-              },
-              "shippingDestination": {
-                "@type": "DefinedRegion",
-                "addressCountry": "GB"
-              },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 0,
-                  "maxValue": 3,
-                  "unitCode": "DAY"
-                },
-                "transitTime": {
-                  "@type": "QuantitativeValue",
-                  "minValue": 1,
-                  "maxValue": 5,
-                  "unitCode": "DAY"
-                }
-              }
-            }
-          }
-        }
-      },
-      {
-        "@type": "ListItem",
-        "position": 3,
-        "item": {
-          "@type": "Product",
-          "@id": "https://dewberrybees.com/products.html#beeswax",
-          "name": "Beeswax",
-          "description": "Pure natural beeswax rendered from our hives in Nailsea, North Somerset.",
-          "image": "https://dewberrybees.com/og-image.png",
-          "brand": { "@type": "Brand", "name": "Dewberry Bees" },
-          "url": "https://dewberrybees.com/products.html",
-          "offers": {
-            "@type": "Offer",
-            "priceCurrency": "GBP",
-            "availability": "https://schema.org/InStock",
-            "itemCondition": "https://schema.org/NewCondition",
-            "seller": { "@type": "LocalBusiness", "name": "Dewberry Bees" },
-            "priceSpecification": {
-              "@type": "PriceSpecification",
-              "priceCurrency": "GBP",
-              "price": "0",
-              "description": "Price on enquiry"
-            },
-            "hasMerchantReturnPolicy": {
-              "@type": "MerchantReturnPolicy",
-              "applicableCountry": "GB",
-              "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted"
-            },
-            "shippingDetails": {
-              "@type": "OfferShippingDetails",
-              "shippingRate": { "@type": "MonetaryAmount", "value": "0", "currency": "GBP" },
-              "shippingDestination": { "@type": "DefinedRegion", "addressCountry": "GB" },
-              "deliveryTime": {
-                "@type": "ShippingDeliveryTime",
-                "handlingTime": { "@type": "QuantitativeValue", "minValue": 0, "maxValue": 3, "unitCode": "DAY" },
-                "transitTime": { "@type": "QuantitativeValue", "minValue": 1, "maxValue": 5, "unitCode": "DAY" }
-              }
-            }
-          }
-        }
-      }
-    ]
-  }
-  </script>
-  <!-- WebSite schema: tells Google the site name -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "name": "Dewberry Bees",
-    "url": "https://dewberrybees.com",
-    "description": "Raw Nailsea honey, beeswax lip balm and natural bee products from a family beekeeping operation in Nailsea, North Somerset.",
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://dewberrybees.com/?q={search_term_string}",
-      "query-input": "required name=search_term_string"
-    }
-  }
   </script>
 </head>
 <body>
