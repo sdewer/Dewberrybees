@@ -473,6 +473,19 @@
       box-sizing: border-box;
     }
 
+    .contact-form select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath fill='%236B3FA0' d='M7 10l5 5 5-5z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 14px center;
+      background-size: 18px;
+      padding-right: 44px;
+      cursor: pointer;
+      line-height: 1.3;
+    }
+
     .contact-form input:focus,
     .contact-form textarea:focus,
     .contact-form select:focus {
