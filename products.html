@@ -11,8 +11,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#6B3FA0" />
-  <title>Our Products | Dewberry Bees — Raw Honey &amp; Beeswax Lip Balm, Nailsea</title>
-  <meta name="description" content="Shop Dewberry Bees' raw Nailsea Wildflower Honey and natural Beeswax Lip Balm. Local, raw, unpasteurised honey and handcrafted lip balm in four flavours. North Somerset." />
+  <title>Our Products | Dewberry Bees — Raw Nailsea &amp; Hewish Honey, Beeswax Lip Balm</title>
+  <meta name="description" content="Shop Dewberry Bees' raw Nailsea and Hewish Wildflower Honey, small taster jars and natural Beeswax Lip Balm. Local, raw, unpasteurised, single-apiary honey and handcrafted lip balm in four flavours. North Somerset." />
   <link rel="stylesheet" href="styles.css" />
   <style>
 
@@ -305,6 +305,85 @@
       box-shadow: 0 6px 20px rgba(107,63,160,0.3);
     }
 
+    /* ── Collection notice bar ── */
+    .collection-notice {
+      width: 100%;
+      background-color: #FFC117;
+      color: #000;
+      text-align: center;
+      font-family: var(--font-bold);
+      font-weight: 700;
+      font-size: clamp(0.85rem, 2.2vw, 1rem);
+      padding: 10px 16px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 2;
+    }
+
+    /* ── Sub-product section (small jar, within honey section) ── */
+    .sub-product {
+      margin-top: 32px;
+      padding-top: 28px;
+      border-top: 2px dashed rgba(107,63,160,0.18);
+    }
+
+    .sub-product-heading {
+      display: flex;
+      align-items: baseline;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 10px;
+    }
+
+    .sub-product-heading h3 {
+      font-family: var(--font-bold);
+      font-weight: 700;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      color: #000;
+    }
+
+    .sub-product-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 10px;
+      margin: 18px 0;
+    }
+
+    @media (max-width: 640px) {
+      .sub-product-gallery { grid-template-columns: repeat(2, 1fr); }
+    }
+
+    .sub-product-gallery a {
+      display: block;
+      overflow: hidden;
+      border-radius: 12px;
+      cursor: zoom-in;
+    }
+
+    .sub-product-gallery img {
+      width: 100%;
+      aspect-ratio: 1/1;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .sub-product-gallery a:hover img {
+      transform: scale(1.05);
+    }
+
+    .custom-label-note {
+      background: rgba(107,63,160,0.08);
+      border-left: 4px solid var(--purple-dark);
+      border-radius: 0 12px 12px 0;
+      padding: 14px 20px;
+      margin-top: 18px;
+      font-family: var(--font-bold);
+      font-size: clamp(0.9rem, 2.3vw, 1rem);
+      color: #3a2800;
+      line-height: 1.7;
+    }
+
     /* ── Bee divider ── */
     .bee-section-divider {
       display: flex;
@@ -340,6 +419,8 @@
 
   <div class="nav-spacer" id="nav-spacer"></div>
 
+  <div class="collection-notice">All honey and lip balms are currently collection from Ridgeway in Nailsea or The Old Vicarage in Hewish.</div>
+
   <!-- Honey drip header -->
   <header class="site-header">
     <img src="drips.png" alt="" role="presentation" />
@@ -350,7 +431,7 @@
     <!-- Page intro -->
     <div class="products-intro">
       <h1>Our Products</h1>
-      <p>Made in Nailsea, North Somerset. Straight from our hives.</p>
+      <p>Made in Nailsea and Hewish, North Somerset. Straight from our hives.</p>
     </div>
 
     <!-- ── HONEY SECTION ── -->
@@ -360,7 +441,7 @@
         <span class="product-tag">⭐ Our Signature Product</span>
         <h2>Nailsea Wildflower Honey</h2>
         <p class="product-subtitle">Local · Raw · Unpasteurised · Wildflower</p>
-        <p class="product-price">£5.00 <span>/ 227g (8 oz) jar</span></p>
+        <p class="product-price">£6.00 <span>/ 227g (8 oz) jar</span></p>
 
         <div class="product-badges">
           <span class="badge">100% Raw</span>
@@ -376,6 +457,9 @@
         <p class="product-desc">
           Because it's not heated, the honey keeps all its natural enzymes and pollen. The flavour changes a little from season to season depending on what's flowering — that's how it should be.
         </p>
+        <p class="product-desc">
+          We now keep bees at two apiaries, Nailsea and Hewish. Each apiary's honey is extracted and jarred separately, never blended, so you know exactly where your honey comes from — right down to the postcode.
+        </p>
         <p class="product-desc" style="font-style:italic;color:var(--purple-dark);">
           Raw honey crystallises over time. It's completely normal and actually a good sign. If yours sets solid, sit the jar in warm water for a bit and it'll loosen up.
         </p>
@@ -389,6 +473,36 @@
           <a href="contact.html">Enquire to Buy</a>
           <span style="font-family:var(--font-bold);font-size:0.95rem;color:var(--purple-light);">Available while stocks last</span>
         </div>
+
+        <!-- ── SUB-PRODUCT: SMALL JAR ── -->
+        <div class="sub-product" id="small-jar">
+          <div class="sub-product-heading">
+            <h3>Nailsea Wildflower Honey — Small Jar</h3>
+            <span class="product-price" style="margin:0;">£2.00 <span>/ 42.5g (1.5 oz) jar</span></span>
+          </div>
+          <div class="product-badges">
+            <span class="badge">100% Raw</span>
+            <span class="badge">Unpasteurised</span>
+            <span class="badge">Local to Nailsea</span>
+            <span class="badge">Single Apiary</span>
+          </div>
+          <p class="product-desc">
+            Same Nailsea wildflower honey, in a small 42.5g (1.5oz) jar. Perfect for wedding favours, gifts, local food hampers, or just a taster of our honey. The size is also carry-on compliant for airlines, if you want to take a local taste abroad with you.
+          </p>
+          <div class="sub-product-gallery">
+            <a href="small-jars-3.jpg" onclick="openLightbox(this); return false;"><img src="small-jars-3.jpg" alt="Three small jars of Dewberry Bees Nailsea Wildflower Honey stacked" loading="lazy" /></a>
+            <a href="small-jar-single.jpg" onclick="openLightbox(this); return false;"><img src="small-jar-single.jpg" alt="A single small jar of Dewberry Bees Nailsea Wildflower Honey" loading="lazy" /></a>
+            <a href="small-large-compare.jpg" onclick="openLightbox(this); return false;"><img src="small-large-compare.jpg" alt="Small jar of honey next to a large jar for size comparison" loading="lazy" /></a>
+            <a href="small-jar-salon-concepts.jpg" onclick="openLightbox(this); return false;"><img src="small-jar-salon-concepts.jpg" alt="Small jar of honey with a custom Salon Concepts label" loading="lazy" /></a>
+          </div>
+          <div class="custom-label-note">
+            Ordering for a wedding or event? We can do small jars with custom labels for larger orders — <a href="contact.html">contact us</a> to discuss what you need.
+          </div>
+          <div class="product-cta">
+            <a href="contact.html">Enquire to Buy</a>
+            <span style="font-family:var(--font-bold);font-size:0.95rem;color:var(--purple-light);">Available while stocks last</span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -396,6 +510,44 @@
     <div class="bee-section-divider">
       <img src="flying-bee.png" alt="" role="presentation" style="transform:scaleX(-1);" />
     </div>
+
+    <!-- ── HEWISH HONEY SECTION ── -->
+    <section class="product-section" id="hewish-honey">
+      <a class="product-hero-wrap" href="hewish-honey-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="hewish-honey-main.jpg" alt="Jar of Dewberry Bees Hewish Wildflower Honey" /></a>
+      <div class="product-body">
+        <span class="product-tag">🍯 Our Second Apiary</span>
+        <h2>Hewish Wildflower Honey</h2>
+        <p class="product-subtitle">Local · Raw · Unpasteurised · Wildflower</p>
+        <p class="product-price">£6.00 <span>/ 227g (8 oz) jar</span></p>
+
+        <div class="product-badges">
+          <span class="badge">100% Raw</span>
+          <span class="badge">Unpasteurised</span>
+          <span class="badge">Local to Hewish</span>
+          <span class="badge">Single Apiary</span>
+          <span class="badge">Wildflower</span>
+        </div>
+
+        <p class="product-desc">
+          Produced from our Hewish apiary and extracted with the same care and attention as our Nailsea honey. Raw, unpasteurised and unblended — never mixed with honey from our other hives.
+        </p>
+        <p class="product-desc">
+          Because it comes from a different location, the flavour is distinct from our Nailsea honey. It takes on the character of the local forage around the hamlet, including an abundance of lime (linden) trees.
+        </p>
+        <p class="product-desc" style="font-style:italic;color:var(--purple-dark);">
+          Raw honey crystallises over time. It's completely normal and actually a good sign. If yours sets solid, sit the jar in warm water for a bit and it'll loosen up.
+        </p>
+
+        <div class="product-cta">
+          <a href="contact.html">Enquire to Buy</a>
+          <span style="font-family:var(--font-bold);font-size:0.95rem;color:var(--purple-light);">Available while stocks last</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Flying bee divider -->
+    <div class="bee-section-divider">
+      <img src="flying-bee.png" alt="" role="presentation" /></div>
 
     <!-- ── LIP BALM SECTION ── -->
     <section class="product-section">

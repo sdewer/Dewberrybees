@@ -11,7 +11,8 @@
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
   <link rel="manifest" href="site.webmanifest" />
   <meta name="theme-color" content="#6B3FA0" />
-  <title>Hive Sponsorship | Dewberry Bees</title>
+  <title>Hive Sponsorship | Dewberry Bees — Nailsea &amp; Hewish, North Somerset</title>
+  <meta name="description" content="Sponsor a hive with Dewberry Bees. Bee Buddy and Pollination Partner sponsorship for individuals and businesses, supporting our Nailsea and Hewish apiaries in North Somerset." />
   <link rel="stylesheet" href="styles.css" />
   <script>
     document.addEventListener('DOMContentLoaded', function() {
@@ -111,6 +112,59 @@
     }
 
     .sponsor-card-body a:hover { text-decoration: underline; }
+
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.88);
+      z-index: 999;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      cursor: zoom-out;
+    }
+    .lightbox.open { display: flex; }
+    .lightbox img {
+      max-width: 95vw;
+      max-height: 90vh;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+    }
+    .lightbox-close {
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      color: #fff;
+      font-size: 2rem;
+      cursor: pointer;
+      font-family: sans-serif;
+      line-height: 1;
+      opacity: 0.8;
+    }
+    .lightbox-close:hover { opacity: 1; }
+
+    .sponsor-photo-wrap {
+      width: 100%;
+      margin-top: 16px;
+      border-radius: 16px;
+      overflow: hidden;
+      cursor: zoom-in;
+      line-height: 0;
+    }
+
+    .sponsor-photo-wrap img {
+      width: 100%;
+      height: auto;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .sponsor-photo-wrap:hover img {
+      transform: scale(1.03);
+    }
   </style>
 </head>
 <body>
@@ -176,6 +230,9 @@
             <div class="sponsor-card-body">
               <h4>Salon Concepts</h4>
               <p>A huge thank you to Adam and the team at <a href="https://salonconcepts.co.uk/" target="_blank" rel="noopener">Salon Concepts</a> for being our very first hive sponsor. Approaching their 40th year, Salon Concepts are a certified B-Corp representing the world's top hair brands across the South West — with sustainability and education at the core of how they work. We're glad it was them.</p>
+              <a class="sponsor-photo-wrap" href="adam-salon-concepts-hive.jpg" onclick="openLightbox(this); return false;">
+                <img src="adam-salon-concepts-hive.jpg" alt="Adam from Salon Concepts with the Salon Concepts sponsored hive" loading="lazy" />
+              </a>
             </div>
           </div>
 
@@ -203,7 +260,6 @@
         </div>
 
       </div>
-      </div>
 
 
     </main>
@@ -212,6 +268,31 @@
     <img src="bottom-wave.png" alt="" role="presentation" style="display:block;width:100%;height:auto;margin:0;padding:0;border:none;" />
     <p style="background-color:#FFC117;color:#000000;font-family:var(--font-bold);font-weight:700;font-size:1rem;text-align:center;margin:0;padding:6px 16px 8px;">© 2025 Dewberry Bees · Nailsea, England.</p>
   </footer>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox" onclick="closeLightbox()">
+    <span class="lightbox-close" onclick="closeLightbox()">✕</span>
+    <img id="lightbox-img" src="" alt="" />
+  </div>
+
+  <script>
+    function openLightbox(el) {
+      var lb = document.getElementById('lightbox');
+      var img = document.getElementById('lightbox-img');
+      img.src = el.href;
+      img.alt = el.querySelector('img').alt;
+      lb.classList.add('open');
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      document.getElementById('lightbox').classList.remove('open');
+      document.getElementById('lightbox-img').src = '';
+      document.body.style.overflow = '';
+    }
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape') closeLightbox();
+    });
+  </script>
 
   <script>
     // Dynamically match body top padding to actual nav height
