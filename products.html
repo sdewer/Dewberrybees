@@ -308,14 +308,17 @@
     /* ── Collection notice bar ── */
     .collection-notice {
       width: 100%;
+      max-width: 900px;
       background-color: #FFC117;
       color: #000;
       text-align: center;
       font-family: var(--font-bold);
       font-weight: 700;
-      font-size: clamp(0.85rem, 2.2vw, 1rem);
-      padding: 10px 16px;
+      font-size: clamp(0.95rem, 2.4vw, 1.1rem);
+      padding: 14px 24px;
       box-sizing: border-box;
+      border-radius: 14px;
+      box-shadow: 0 4px 20px rgba(107,63,160,0.18);
       position: relative;
       z-index: 2;
     }
@@ -342,9 +345,30 @@
       color: #000;
     }
 
+    .sub-product-hero-wrap {
+      display: block;
+      overflow: hidden;
+      border-radius: 16px;
+      cursor: zoom-in;
+      margin: 18px 0;
+      line-height: 0;
+    }
+
+    .sub-product-hero {
+      width: 100%;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+
+    .sub-product-hero-wrap:hover .sub-product-hero {
+      transform: scale(1.03);
+    }
+
     .sub-product-gallery {
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 10px;
       margin: 18px 0;
     }
@@ -419,8 +443,6 @@
 
   <div class="nav-spacer" id="nav-spacer"></div>
 
-  <div class="collection-notice">All honey and lip balms are currently collection from Ridgeway in Nailsea or The Old Vicarage in Hewish.</div>
-
   <!-- Honey drip header -->
   <header class="site-header">
     <img src="drips.png" alt="" role="presentation" />
@@ -434,9 +456,12 @@
       <p>Made in Nailsea and Hewish, North Somerset. Straight from our hives.</p>
     </div>
 
+    <div class="collection-notice">Collection info: All honey and lip balms are currently collection from Ridgeway in Nailsea or The Old Vicarage in Hewish.</div>
+
+
     <!-- ── HONEY SECTION ── -->
     <section class="product-section">
-      <a class="product-hero-wrap" href="honey-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="honey-main.jpg" alt="Jar of Dewberry Bees Nailsea Wildflower Honey" /></a>
+      <a class="product-hero-wrap" href="honey-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="honey-main.jpg" alt="Jar of Dewberry Bees Nailsea Wildflower Honey" style="aspect-ratio:1/1;" /></a>
       <div class="product-body">
         <span class="product-tag">⭐ Our Signature Product</span>
         <h2>Nailsea Wildflower Honey</h2>
@@ -480,6 +505,7 @@
             <h3>Nailsea Wildflower Honey — Small Jar</h3>
             <span class="product-price" style="margin:0;">£2.00 <span>/ 42.5g (1.5 oz) jar</span></span>
           </div>
+          <a class="sub-product-hero-wrap" href="small-jars-3.jpg" onclick="openLightbox(this); return false;"><img class="sub-product-hero" src="small-jars-3.jpg" alt="Three small jars of Dewberry Bees Nailsea Wildflower Honey stacked" /></a>
           <div class="product-badges">
             <span class="badge">100% Raw</span>
             <span class="badge">Unpasteurised</span>
@@ -490,7 +516,6 @@
             Same Nailsea wildflower honey, in a small 42.5g (1.5oz) jar. Perfect for wedding favours, gifts, local food hampers, or just a taster of our honey. The size is also carry-on compliant for airlines, if you want to take a local taste abroad with you.
           </p>
           <div class="sub-product-gallery">
-            <a href="small-jars-3.jpg" onclick="openLightbox(this); return false;"><img src="small-jars-3.jpg" alt="Three small jars of Dewberry Bees Nailsea Wildflower Honey stacked" loading="lazy" /></a>
             <a href="small-jar-single.jpg" onclick="openLightbox(this); return false;"><img src="small-jar-single.jpg" alt="A single small jar of Dewberry Bees Nailsea Wildflower Honey" loading="lazy" /></a>
             <a href="small-large-compare.jpg" onclick="openLightbox(this); return false;"><img src="small-large-compare.jpg" alt="Small jar of honey next to a large jar for size comparison" loading="lazy" /></a>
             <a href="small-jar-salon-concepts.jpg" onclick="openLightbox(this); return false;"><img src="small-jar-salon-concepts.jpg" alt="Small jar of honey with a custom Salon Concepts label" loading="lazy" /></a>
@@ -513,7 +538,7 @@
 
     <!-- ── HEWISH HONEY SECTION ── -->
     <section class="product-section" id="hewish-honey">
-      <a class="product-hero-wrap" href="hewish-honey-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="hewish-honey-main.jpg" alt="Jar of Dewberry Bees Hewish Wildflower Honey" /></a>
+      <a class="product-hero-wrap" href="hewish-honey-main.jpg" onclick="openLightbox(this); return false;"><img class="product-hero" src="hewish-honey-main.jpg" alt="Jar of Dewberry Bees Hewish Wildflower Honey" style="aspect-ratio:1/1;" /></a>
       <div class="product-body">
         <span class="product-tag">🍯 Our Second Apiary</span>
         <h2>Hewish Wildflower Honey</h2>

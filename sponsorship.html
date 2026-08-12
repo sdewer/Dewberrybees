@@ -58,7 +58,7 @@
     .sponsor-card-full {
       display: flex;
       flex-direction: column;
-      align-items: center;
+      align-items: stretch;
       gap: 20px;
       background: rgba(255,255,255,0.65);
       border-radius: 20px;
@@ -69,8 +69,16 @@
       text-align: center;
     }
 
+    .sponsor-card-top {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      text-align: center;
+    }
+
     @media (min-width: 560px) {
-      .sponsor-card-full {
+      .sponsor-card-top {
         flex-direction: row;
         align-items: center;
         text-align: left;
@@ -147,8 +155,9 @@
     .lightbox-close:hover { opacity: 1; }
 
     .sponsor-photo-wrap {
+      display: block;
       width: 100%;
-      margin-top: 16px;
+      margin: 4px 0 0;
       border-radius: 16px;
       overflow: hidden;
       cursor: zoom-in;
@@ -157,7 +166,8 @@
 
     .sponsor-photo-wrap img {
       width: 100%;
-      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
       display: block;
       transition: transform 0.3s ease;
     }
@@ -224,25 +234,29 @@
           </h3>
 
           <div class="sponsor-card-full">
-            <div class="sponsor-card-logo-wrap">
-              <img src="salon-concepts-logo.png" alt="Salon Concepts logo" />
+            <div class="sponsor-card-top">
+              <div class="sponsor-card-logo-wrap">
+                <img src="salon-concepts-logo.png" alt="Salon Concepts logo" />
+              </div>
+              <div class="sponsor-card-body">
+                <h4>Salon Concepts</h4>
+                <p>A huge thank you to Adam and the team at <a href="https://salonconcepts.co.uk/" target="_blank" rel="noopener">Salon Concepts</a> for being our very first hive sponsor. Approaching their 40th year, Salon Concepts are a certified B-Corp representing the world's top hair brands across the South West — with sustainability and education at the core of how they work. We're glad it was them.</p>
+              </div>
             </div>
-            <div class="sponsor-card-body">
-              <h4>Salon Concepts</h4>
-              <p>A huge thank you to Adam and the team at <a href="https://salonconcepts.co.uk/" target="_blank" rel="noopener">Salon Concepts</a> for being our very first hive sponsor. Approaching their 40th year, Salon Concepts are a certified B-Corp representing the world's top hair brands across the South West — with sustainability and education at the core of how they work. We're glad it was them.</p>
-              <a class="sponsor-photo-wrap" href="adam-salon-concepts-hive.jpg" onclick="openLightbox(this); return false;">
-                <img src="adam-salon-concepts-hive.jpg" alt="Adam from Salon Concepts with the Salon Concepts sponsored hive" loading="lazy" />
-              </a>
-            </div>
+            <a class="sponsor-photo-wrap" href="adam-salon-concepts-hive.jpg" onclick="openLightbox(this); return false;">
+              <img src="adam-salon-concepts-hive.jpg" alt="Adam from Salon Concepts with the Salon Concepts sponsored hive" loading="lazy" />
+            </a>
           </div>
 
           <div class="sponsor-card-full" style="margin-top:16px;">
-            <div class="sponsor-card-logo-wrap">
-              <img src="stewart-dewer-fund.png" alt="The Stewart Dewer Fund" />
-            </div>
-            <div class="sponsor-card-body">
-              <h4>The Stewart Dewer Fund</h4>
-              <p>This is where we support others: a portion of our profits every year will be donated to the Stewart Dewer Fund. Stewart is much loved and much missed by everyone who knew him. He was a huge advocate for young people and the small charity created in his name gives small grants to young people to help them in their studies, engage in training, and to support other life enriching and sporting opportunities — such as school camps, courses, clubs, and other activities.</p>
+            <div class="sponsor-card-top">
+              <div class="sponsor-card-logo-wrap">
+                <img src="stewart-dewer-fund.png" alt="The Stewart Dewer Fund" />
+              </div>
+              <div class="sponsor-card-body">
+                <h4>The Stewart Dewer Fund</h4>
+                <p>This is where we support others: a portion of our profits every year will be donated to the Stewart Dewer Fund. Stewart is much loved and much missed by everyone who knew him. He was a huge advocate for young people and the small charity created in his name gives small grants to young people to help them in their studies, engage in training, and to support other life enriching and sporting opportunities — such as school camps, courses, clubs, and other activities.</p>
+              </div>
             </div>
           </div>
         </div>
