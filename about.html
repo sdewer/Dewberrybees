@@ -207,6 +207,73 @@
       line-height: 1.7;
     }
 
+    .award-banner .award-intro { margin-bottom: 18px; }
+
+    .award-year {
+      font-family: var(--font-bold);
+      font-size: clamp(1.05rem, 3vw, 1.3rem);
+      color: #FFC117;
+      text-align: left;
+      margin: 18px 0 10px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid rgba(255,255,255,0.3);
+    }
+
+    .award-list {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 10px;
+      text-align: left;
+    }
+
+    .award-list li {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      background: rgba(255,255,255,0.12);
+      border-radius: 12px;
+      padding: 10px 14px;
+    }
+
+    .place {
+      flex: 0 0 auto;
+      min-width: 64px;
+      text-align: center;
+      font-family: var(--font-bold);
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #2b1a00;
+      border-radius: 999px;
+      padding: 6px 12px;
+    }
+    .place-1 { background: #FFC117; }
+    .place-2 { background: #E3E3E8; }
+    .place-3 { background: #E0A36B; }
+    .place-mixed { background: #fff; color: var(--purple-dark); font-size: 0.8rem; }
+
+    .award-what {
+      font-family: var(--font-bold);
+      font-size: clamp(0.95rem, 2.4vw, 1.08rem);
+      line-height: 1.35;
+    }
+
+    .award-where {
+      display: block;
+      font-size: 0.85em;
+      opacity: 0.8;
+      margin-top: 2px;
+    }
+    .award-where a { color: #FFC117; }
+
+    .award-banner .award-note {
+      font-style: italic;
+      font-size: 0.92rem;
+      margin-top: 12px;
+      opacity: 0.85;
+    }
+
     /* CTA section */
     .about-cta {
       display: flex;
@@ -350,9 +417,21 @@
     <!-- Award banner + trophy photo -->
     <div class="award-banner">
       <h3>🏆 A Few Successes Along the Way</h3>
-      <p>
-        We've picked up a few prizes at the <a href="https://www.northsomersetbeekeepers.org/" target="_blank" rel="noopener" style="color:#FFC117;">NSBKA</a> shows — 1st, 2nd and 3rd across Honey Fudge, Honey Shortbread, Honey Cake, wax products and 2nd in Medium Honey in 2026. In 2024 we won the Novice Shield, an overall award across multiple categories. Quietly proud of that one. This year we also entered the liquid honey class at the Clevedon Show, where Mandy's Hewish honey took 1st and our Nailsea honey came 3rd, against what the judge said was some of the strongest competition they'd seen.
-      </p>
+      <p class="award-intro">Show results from the honey and wax our bees produce.</p>
+
+      <div class="award-year">2026</div>
+      <ul class="award-list">
+        <li><span class="place place-1">1st</span><span class="award-what">Liquid Honey (Hewish)<span class="award-where">The Clevedon Show</span></span></li>
+        <li><span class="place place-3">3rd</span><span class="award-what">Liquid Honey (Nailsea)<span class="award-where">The Clevedon Show</span></span></li>
+        <li><span class="place place-2">2nd</span><span class="award-what">Medium Honey<span class="award-where"><a href="https://www.northsomersetbeekeepers.org/" target="_blank" rel="noopener">North Somerset Beekeepers Association</a> Show</span></span></li>
+        <li><span class="place place-mixed">1st 2nd 3rd</span><span class="award-what">Honey Fudge, Honey Shortbread, Honey Cake and wax products<span class="award-where">North Somerset Beekeepers Association Show</span></span></li>
+      </ul>
+      <p class="award-note">The Clevedon Show judge said the liquid honey class was some of the strongest competition they'd seen.</p>
+
+      <div class="award-year">2024</div>
+      <ul class="award-list">
+        <li><span class="place place-1">Shield</span><span class="award-what">Novice Shield, overall award across multiple categories<span class="award-where">North Somerset Beekeepers Association Show</span></span></li>
+      </ul>
     </div>
 
     <!-- Trophy + jars photos -->
