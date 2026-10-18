@@ -177,6 +177,12 @@
 
     .lightbox-close:hover { opacity: 1; }
 
+    /* Awards photo row: on small screens the third photo spans the full width */
+    @media (max-width: 600px) {
+      .awards-grid a:nth-child(3) { grid-column: 1 / -1; }
+      .awards-grid a:nth-child(3) img { aspect-ratio: 2/1; }
+    }
+
     /* Award banner */
     .award-banner {
       background: linear-gradient(135deg, var(--purple-dark), var(--purple-light));
@@ -345,14 +351,17 @@
     <div class="award-banner">
       <h3>🏆 A Few Successes Along the Way</h3>
       <p>
-        We've picked up a few prizes at the <a href="https://www.northsomersetbeekeepers.org/" target="_blank" rel="noopener" style="color:#FFC117;">NSBKA</a> shows — 1st, 2nd and 3rd across Honey Fudge, Honey Shortbread, Honey Cake, wax products and 2nd in Medium Honey in 2026. In 2024 we won the Novice Shield, an overall award across multiple categories. Quietly proud of that one.
+        We've picked up a few prizes at the <a href="https://www.northsomersetbeekeepers.org/" target="_blank" rel="noopener" style="color:#FFC117;">NSBKA</a> shows — 1st, 2nd and 3rd across Honey Fudge, Honey Shortbread, Honey Cake, wax products and 2nd in Medium Honey in 2026. In 2024 we won the Novice Shield, an overall award across multiple categories. Quietly proud of that one. This year we also entered the liquid honey class at the Clevedon Show, where Mandy's Hewish honey took 1st and our Nailsea honey came 3rd, against what the judge said was some of the strongest competition they'd seen.
       </p>
     </div>
 
     <!-- Trophy + jars photos -->
-    <div class="photo-grid cols-2" style="max-width:820px;width:100%;">
+    <div class="photo-grid cols-3 awards-grid" style="max-width:820px;width:100%;">
       <a href="about-trophy.jpg" onclick="openLightbox(this); return false;">
         <img src="about-trophy.jpg" alt="Winning the Novice Shield at the NSBKA show 2024" loading="lazy" />
+      </a>
+      <a href="about-clevedon-show.jpg" onclick="openLightbox(this); return false;">
+        <img src="about-clevedon-show.jpg" alt="Hewish and Nailsea honey jars with their 1st and 3rd prize cards from the Clevedon Show 2026" loading="lazy" />
       </a>
       <a href="about-jars.jpg" onclick="openLightbox(this); return false;">
         <img src="about-jars.jpg" alt="Rows of our Nailsea Wildflower Honey jars" loading="lazy" />
@@ -442,4 +451,4 @@
   </script>
 
 </body>
-</html>
+</html>
